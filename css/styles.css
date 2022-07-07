@@ -1,18 +1,26 @@
 body {
   box-sizing: border-box;
   background-color: #f2f2f2;
+  font-family: "Libre Baskerville", serif;
 }
 .container {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+h1 {
+  color: #008fd1;
+  text-transform: uppercase;
+  font-size: 3rem;
+  max-width: 40rem;
+}
+
 h2 {
   flex: 0 1 100%;
   text-align: center;
   font-size: 1.6rem;
 }
 h3 {
-  font-family: "Libre Baskerville", serif;
   margin: 0;
   font-weight: 700;
 }
@@ -29,13 +37,45 @@ img {
   background-color: #008fd1;
   padding: 1rem 0;
   position: absolute;
-  top: 1rem;
+  top: 0;
   width: 100%;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 776px) {
+  .main-navigation {
+    flex-direction: row;
+    flex: 0 0 25rem;
+    justify-content: space-between;
+  }
+}
+
+.main-navigation a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.main-navigation a:hover {
+  color: #a2a2a2;
 }
 
 .header-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 776px) {
@@ -43,6 +83,10 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .main-navigation a {
+    margin-top: 0;
   }
 }
 
@@ -53,6 +97,9 @@ img {
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /* End: Header */
 
